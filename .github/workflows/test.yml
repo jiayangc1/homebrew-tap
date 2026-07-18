@@ -17,5 +17,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Test Authometry formula
         run: |
-          brew install --formula ./Formula/authometry.rb
-          brew test authometry
+          brew tap-new authometry/test
+          cp Formula/authometry.rb "$(brew --repository authometry/test)/Formula/authometry.rb"
+          brew install authometry/test/authometry
+          brew test authometry/test/authometry
