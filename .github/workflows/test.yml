@@ -1,0 +1,21 @@
+name: Test formula
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test Authometry formula
+        run: |
+          brew install --formula ./Formula/authometry.rb
+          brew test authometry
