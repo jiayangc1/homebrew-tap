@@ -14,6 +14,6 @@ class Authometry < Formula
   test do
     assert_equal version.to_s, shell_output("#{bin}/authometry --version").strip
     system bin/"authometry", "init", "--directory", testpath/"config"
-    assert_path_exists testpath/"config"/"instance.yaml"
+    assert_path_exists testpath/"config"/"authometry.yaml"
   end
 end
