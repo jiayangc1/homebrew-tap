@@ -1,8 +1,8 @@
 class Authometry < Formula
   desc "Configuration-as-code CLI for Authometry"
   homepage "https://github.com/jiayangc1/authometry"
-  url "https://registry.npmjs.org/authometry/-/authometry-0.1.2.tgz"
-  sha256 "a0e6f1faf72ab852035421b9f3b6b7cb3185f18e31e0d4fc56e3910aee3f9010"
+  url "https://registry.npmjs.org/authometry/-/authometry-0.2.0.tgz"
+  sha256 "12ee5e6bfaf16f62b2d21beb1a92b68a51dff466043568afa39829179e8c3a9d"
   license "AGPL-3.0-only"
 
   depends_on "node"
